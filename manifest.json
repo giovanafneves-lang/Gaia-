@@ -1,0 +1,23 @@
+
+{
+  "name": "Gaia Financial OS",
+  "short_name": "Gaia",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1C1512",
+  "theme_color": "#1C1512",
+  "description": "Plataforma de Alta Performance para Inteligência Financeira e Growth Hacking.",
+  "icons": [
+    {
+      "src": "https://cdn.lovable.dev/img/logos/gaia-192.png", 
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.lovable.dev/img/logos/gaia-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait-primary"
+}

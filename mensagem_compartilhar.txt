@@ -1,0 +1,6 @@
+Abra este link no celular e siga as instruções para "Adicionar à Tela de Início":
+[SEU_LINK_AQUI]
+
+Instruções rápidas:
+- Android (Chrome): tocar nos três pontinhos → "Adicionar à tela inicial"
+- iPhone (Safari): tocar no botão compartilhar → "Adicionar à Tela de Início"

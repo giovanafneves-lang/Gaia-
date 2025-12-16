@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://cdn.lovable.dev/img/logos/gaia-192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#1C1512" />
+    <title>Gaia | Enterprise Financial OS</title>
+    
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Google Performance Best Practices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gaia: {
+                950: '#1C1512', 900: '#2A1F1B', 800: '#4A3B34', 700: '#634F46', 600: '#80685D', 500: '#9E8578', 400: '#BCA69B', 300: '#DCCbc2', 200: '#EDE4DE', 100: '#F8F5F3', 
+                sand: '#E6D2B5', terracotta: '#C05640', 'terracotta-light': '#D97A64', bronze: '#967259', teal: '#115E59', cyan: '#2DD4BF', purple: '#7C3AED'
+              }
+            },
+            fontFamily: { sans: ['Calibre', 'Inter', 'sans-serif'], serif: ['Cinzel', 'serif'] },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.8s ease-out forwards',
+              'spin-slow': 'spin 20s linear infinite',
+              'mesh': 'meshMove 20s ease-in-out infinite alternate'
+            },
+            keyframes: {
+              float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-15px)' } },
+              fadeIn: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+              meshMove: { '0%': { transform: 'translate(0, 0) scale(1)' }, '100%': { transform: 'translate(30px, -50px) scale(1.1)' } }
+            },
+            boxShadow: { '4k': '0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08)', 'glow-cyan': '0 0 30px rgba(45, 212, 191, 0.1)' }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { background-color: #1C1512; color: #F8F5F3; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+      ::-webkit-scrollbar-thumb { background: #634F46; border-radius: 10px; }
+      .glass-panel { background: rgba(42, 31, 27, 0.65); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.06); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "lightweight-charts": "https://esm.sh/lightweight-charts@^4.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Entry Point -->
+    <script type="module" src="./index.tsx"></script>
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW Error', err)); });
+      }
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
